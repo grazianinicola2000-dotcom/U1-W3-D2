@@ -164,7 +164,10 @@
          Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
         */
 
-      const revealFooterLink = function () {};
+      const revealFooterLink = function () {
+        const aQS = document.querySelector("footer a");
+        alert(aQS.href);
+      };
 
       /* ESERCIZIO 11
          Crea una funzione che crei una tabella nell'elemento con id "tableArea".
@@ -194,6 +197,11 @@
         for (let i = 0; i < rgb.length; i++) {
           rgb[i] = Math.floor(Math.random() * 256);
         }
+        const rgbColor = rgb.join(", ");
+        console.log(rgbColor);
+
+        const h2 = document.querySelector("h2");
+        h2.style.color = "rgb(" + rgbColor + ")";
       };
     </script>
   </body>
